@@ -1,0 +1,9 @@
+void Imprime(double valor){
+	cout << valor;
+}
+void Cuadrado (int entero){
+	cout << entero*entero;
+}
+void EliminaUltimo(string cadena){
+	cadena.pop_back();
+}

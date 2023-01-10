@@ -1,0 +1,46 @@
+int Sumale1(int entero){
+	return entero++;
+}
+int Sumale1(int entero){
+	return entero++;
+}
+int ValorAbsoluto(int entero){
+	if (entero < 0)
+		return entero = -entero;
+	else
+		return entero;
+}
+bool EsPositivo(int valor){
+	if (valor > 0)
+		return true;
+	else
+		return false;
+}
+long ParteEntera(double real){
+	long parte_entera;
+	parte_entera = trunc(real);
+	return parte_entera;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+int Sumale1(int entero){
+	return entero + 1;
+}
+int main(){
+	int n = 5;
+	Sumale1(n);
+	cout << n;
+}
+
+El programa compila, pero imprime en pantalla 5 en vez de 6. ¿Por qué? ¿Qué solución propone?
+
+Devuelve 5 porque no estamos asignando el valor de Sumale1(n) a ningún valor, mi propuesta es la siguiente;
+
+int Sumale1(int entero){
+	return entero + 1;
+}
+int main(){
+	int n = 5;
+	int aux = n;
+	n = Sumale1(aux);
+	cout << n;
+}

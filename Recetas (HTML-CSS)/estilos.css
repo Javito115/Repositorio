@@ -1,0 +1,338 @@
+body{
+
+    background-position: center;  /* Centrar imagen */
+    width: 1200px;     /* Menor que ancho de imagen para dejar borde blanco */
+    margin: 0 auto;   /* Centrar el body */
+    
+    
+    }
+    
+    
+    
+    
+    .cabecera {
+      background-color: #E900A6;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+    }
+    
+    .foodHeader {
+      width: 110px;
+      margin: 10px;
+    }
+    
+    
+    
+    /*  MENU */
+    nav {
+      background-color: #FFBAEB;
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    
+    nav ul {
+      padding-left: 0;
+      list-style: none;
+    }
+    
+    nav ul li {
+      display: inline;
+    }
+    
+    nav ul li a {
+      padding: 15px 25px;
+      color: #af930e;
+      text-decoration: none;
+    }
+    
+    nav ul li a:hover {
+      background: #E900A6;
+      font-size: 120%;
+    }
+    
+    
+    
+    /* CUERPO */
+    main {
+      display: flex
+    }
+    
+    .cajaPrincipal {
+      background-color: #FFBAEB;
+      border: 2px solid #af930e;
+      height: 3000px
+    }
+    
+    
+    
+    
+    /* TITULO */
+    .TituloReceta {
+      background-color: #E900A6;
+      padding: 5px;
+      margin: 10px;
+    }
+    
+    .TituloReceta .treceta {
+      display: inline-block;
+    }
+    
+    .TituloReceta .star {
+      width: 150px;
+      height: 30px;
+      float: right;
+    }
+    
+    .categoria-autor {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -20px;
+      padding: 0 10px 0 10px;
+    }
+    
+    
+    
+    /* PRESENTACION */
+    .presentacion {
+      background-color: #E4B4FE;
+      margin: 10px 10px 50px 10px;
+      padding: 10px 10px 60px 10px;
+    }
+    
+    .presentacion .fotoTerminado {
+      float: right;
+      width: 10rem;
+      margin: 5px 10px 10px 10px;
+    }
+    
+    
+    
+    /* PROCEDIMIENTO */
+    .procedimiento .pasos ol li {
+      margin: 15px;
+    }
+    
+    .procedimiento .ingredientes {
+      background-color: #E900A6;
+      float: right;
+      margin: 0 30px 10px 10px;
+      padding:10px 10px 10px 0;
+    }
+    
+    .procedimiento .ingredientes ul li{
+      list-style: none;
+      margin-left: -27px;
+    }
+    
+    .procedimiento .pasos .imagenesPasos {
+      padding: 0 150px 0 150px;
+    }
+    
+    .procedimiento .pasos .imagenesPasos .fotosPasos {
+      width: 250px;
+      height: 175px;
+      margin: 5px;
+    }
+    
+    
+    
+    /* PARTE INFERIOR */
+    .comentarios {
+      display: grid;
+      grid-row-gap: 15px;
+    }
+    
+    .comentarios .comentario {
+      background-color: #ffcafe;
+      margin: 0 10px 0 10px;
+      padding: 0 10px 0 10px;
+    }
+    
+    .comentarios .comentador {
+      color: #ac23ac;
+    }
+    
+    .pie_pagina {
+      display: flex;
+      flex-direction: row-reverse;
+      background-color: #ffd24c;
+      margin: 10px;
+    }
+    
+    .pie_pagina .icono {
+      height: 40px;
+      width: 40px;
+      padding: 5px;
+    }
+    
+    
+    
+    /* ASIDE */
+    .aside {
+      float: right;
+      width: 1000px;
+      margin: 0 0 10px 10px;
+    }
+    
+    .aside .cajasAside {
+      background-color: #FFBAEB;
+      border: 2px solid #af930e;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    
+    .aside .cajasAside h3, h4 {
+      background-color: #E900A6;
+      padding: 10px;
+      margin: 5px;
+    }
+    
+    .aside .cajasAside input[type="text"], .login input[type="password"] {
+      width: 80px;
+    }
+    
+    .aside .cajasAside label {
+      display: block;
+      margin: 10px;
+    }
+    
+    .aside #valoradas {
+      text-align: left;
+    }
+    
+    
+    
+    /* FOOTER */
+    footer {
+      display: flex;
+      background-color: #E900A6;
+      margin-top: 10px;
+      padding: 5px 10px 5px 10px;
+      justify-content: space-around;
+    }
+    
+    footer .mapa a {
+      text-decoration: none;
+    }
+    
+    footer .mapa a:hover {
+      text-decoration: underline;
+    }
+    
+    footer .redes {
+      display: flex;
+    }
+    
+    footer .redes .red {
+      margin: auto 30px auto 30px;
+    }
+    
+    
+    
+    
+    
+    /* Dispositivos de hasta 800px */
+    @media screen and (max-device-width:800px) {
+      main {
+        flex-direction: column-reverse;
+        font-size: 60%;
+      }
+    
+    
+      /* ASIDE */
+      .aside {
+        width: 100%;
+      }
+    
+      .aside .cajasAside {
+        display: flex;
+        padding: 20px;
+        justify-content: space-around;
+        margin: 0 10px 0 -10px;
+        font-size: 150%;
+        width: auto;
+      }
+    
+      .aside #valoradas {
+        display: none;
+      }
+    
+      .aside #num_recetas {
+        display: none;
+      }
+    
+      .aside .cajasAside h3 {
+        display: none;
+      }
+    
+      .aside .cajasAside label {
+        margin: 0 30px 0 30px;
+        display: inline;
+      }
+    
+    
+      /* TITULO */
+      .TituloReceta .star {
+        display: none;
+      }
+    
+      .categoria-autor {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        position: relative;
+        bottom: 36px;
+        right: 10px;
+      }
+    
+      .categoria-autor p {
+        margin: 2px;
+      }
+    
+    
+      /* PRESENTACION Y PROCEDIMIENTO */
+      .presentacion {
+        margin-top: -30px;
+      }
+    
+      .procedimiento .ingredientes {
+        float: none;
+        margin: -30px 10px 10px 10px;
+        padding-left: 20px;
+      }
+    
+      .procedimiento .ingredientes ul {
+        display: grid;
+        grid-template-columns: 50% 50%;
+      }
+    
+      .procedimiento .pasos .imagenesPasos {
+        padding: 0 10px 0 70px;
+      }
+    
+    
+      /* PARTE INFERIOR */
+      .p_inferior {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-bottom: 10px;
+      }
+    
+    
+      /* FOOTER */
+      footer {
+        display: inherit;
+      }
+    
+      footer .barra {
+        display: none;
+      }
+    
+      footer .redes .red {
+        margin-right: 5px;
+        margin-top: 5px;
+      }
+    
+    }
+    
